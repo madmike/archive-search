@@ -84,9 +84,9 @@ export default {
         this.resultsReady = false
 
         const resNoosphere = await axios.get('https://noosphere.ru/pubs.json?query=' + this.q)
-        const resAire = await axios.get('http://api.openaire.eu/search/publications?format=json&size=15&title=' + this.q)
+        const resAire = await axios.get('https://api.openaire.eu/search/publications?format=json&size=15&title=' + this.q)
         const resEuropeana = await axios.get('https://www.europeana.eu/api/v2/search.json?query=' + this.q + '&wskey=TtdkGCiKH')
-        const resInternetArchive = await axios.get('http://openlibrary.org/search.json?q=' + this.q)
+        const resInternetArchive = await axios.get('https://openlibrary.org/search.json?q=' + this.q)
         const resWikiData = await axios.get('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent('https://www.wikidata.org/w/api.php?action=wbsearchentities&language=en&format=json&search=' + encodeURIComponent(this.q)))
 
         console.log(resNoosphere)
